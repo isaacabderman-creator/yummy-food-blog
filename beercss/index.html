@@ -1,136 +1,244 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/output.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/output.css" />
     <title>Yummy Food Blog</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="w-full bg-white shadow-md">
-        <div class="max-w-7xl mx-auto px-4">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex items-center justify-between h-16">
+          <!-- Logo -->
+          <div>
+            <a href="./index.html">
+              <img src="img/logo.png" alt="Logo" class="h-10" />
+            </a>
+          </div>
 
-            <div class="flex items-center justify-between h-16">
+          <!-- Navigation Desktop -->
+          <nav class="hidden md:flex space-x-8 items-center">
+            <a href="#" class="text-gray-800 hover:text-blue-600 font-medium">
+              Home
+            </a>
 
-                <!-- Logo -->
-                <div>
-                    <a href="./index.html">
-                        <img src="img/logo.png" alt="Logo" class="h-10">
-                    </a>
-                </div>
+            <!-- Dropdown -->
+            <div class="relative group">
+              <button class="text-gray-800 hover:text-blue-600 font-medium">
+                Pages
+              </button>
 
-                <!-- Navigation Desktop -->
-                <nav class="hidden md:flex space-x-8 items-center">
-
-                    <a href="#" class="text-gray-800 hover:text-blue-600 font-medium">
-                        Home
-                    </a>
-
-                    <!-- Dropdown -->
-                    <div class="relative group">
-                        <button class="text-gray-800 hover:text-blue-600 font-medium">
-                            Pages
-                        </button>
-
-                        <ul class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md 
-                         opacity-0 invisible group-hover:opacity-100 
-                         group-hover:visible transition duration-200">
-
-                            <li><a href="about-me.html" class="block px-4 py-2 hover:bg-gray-100">About Me</a></li>
-                            <li><a href="categories.html" class="block px-4 py-2 hover:bg-gray-100">Categories</a></li>
-                            <li><a href="recipe.html" class="block px-4 py-2 hover:bg-gray-100">Recipe</a></li>
-                            <li><a href="blog.html" class="block px-4 py-2 hover:bg-gray-100">Blog</a></li>
-                            <li><a href="contact.html" class="block px-4 py-2 hover:bg-gray-100">Contact</a></li>
-
-                        </ul>
-                    </div>
-
-                    <a href="recipe.html" class="text-gray-800 hover:text-blue-600 font-medium">
-                        Recipes
-                    </a>
-
-                    <a href="categories.html" class="text-gray-800 hover:text-blue-600 font-medium">
-                        Best Of
-                    </a>
-
-                    <a href="contact.html" class="text-gray-800 hover:text-blue-600 font-medium">
-                        Contact
-                    </a>
-
-                </nav>
-
-                <!-- Search icon -->
-                <div class="hidden md:block">
-                    <button class="text-gray-700 hover:text-blue-600">
-                        🔍
-                    </button>
-                </div>
-
-                <!-- Mobile button -->
-                <button class="md:hidden text-gray-800">
-                    ☰
-                </button>
-
+              <ul
+                class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-200"
+              >
+                <li>
+                  <a
+                    href="about-me.html"
+                    class="block px-4 py-2 hover:bg-gray-100"
+                    >About Me</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="categories.html"
+                    class="block px-4 py-2 hover:bg-gray-100"
+                    >Categories</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="recipe.html"
+                    class="block px-4 py-2 hover:bg-gray-100"
+                    >Recipe</a
+                  >
+                </li>
+                <li>
+                  <a href="blog.html" class="block px-4 py-2 hover:bg-gray-100"
+                    >Blog</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="contact.html"
+                    class="block px-4 py-2 hover:bg-gray-100"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
             </div>
+
+            <a
+              href="recipe.html"
+              class="text-gray-800 hover:text-blue-600 font-medium"
+            >
+              Recipes
+            </a>
+
+            <a
+              href="categories.html"
+              class="text-gray-800 hover:text-blue-600 font-medium"
+            >
+              Best Of
+            </a>
+
+            <a
+              href="contact.html"
+              class="text-gray-800 hover:text-blue-600 font-medium"
+            >
+              Contact
+            </a>
+          </nav>
+
+          <!-- Search icon -->
+          <div class="hidden md:block">
+            <button class="text-gray-700 hover:text-blue-600">🔍</button>
+          </div>
+
+          <!-- Mobile button -->
+          <button class="md:hidden text-gray-800">☰</button>
         </div>
+      </div>
     </header>
     <main>
-        <section class="page-top-recipe">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 order-lg-2">
-                        <div class="pt-recipe-item large-item">
-                            <div class="pt-recipe-img set-bg" data-setbg="img/recipe-3.jpg">
-                                <i class="fa fa-plus"></i>
-                            </div>
-                            <div class="pt-recipe-text">
-                                <span>March 10, 2019</span>
-                                <h3>Cannellini Aglio e Olio with Salmon</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 order-lg-1">
-                        <div class="pt-recipe-item">
-                            <div class="pt-recipe-img set-bg" data-setbg="img/recipe-1.jpg">
-                                <i class="fa fa-plus"></i>
-                            </div>
-                            <div class="pt-recipe-text">
-                                <h4>Raw Vegan Carrot Cake Bites with Avocado</h4>
-                            </div>
-                        </div>
-                        <div class="pt-recipe-item">
-                            <div class="pt-recipe-img set-bg" data-setbg="img/recipe-2.jpg">
-                                <i class="fa fa-plus"></i>
-                            </div>
-                            <div class="pt-recipe-text">
-                                <h4>One Pot Weeknight Lasagna Soup Recipe</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 order-lg-3">
-                        <div class="pt-recipe-item">
-                            <div class="pt-recipe-img set-bg" data-setbg="img/recipe-4.jpg">
-                                <i class="fa fa-plus"></i>
-                            </div>
-                            <div class="pt-recipe-text">
-                                <h4>Beef Burger with French Fries and Salad</h4>
-                            </div>
-                        </div>
-                        <div class="pt-recipe-item">
-                            <div class="pt-recipe-img set-bg" data-setbg="img/recipe-5.jpg">
-                                <i class="fa fa-plus"></i>
-                            </div>
-                            <div class="pt-recipe-text">
-                                <h4>Raspberry Pancakes with Honey and Butter</h4>
-                            </div>
-                        </div>
-                    </div>
+      <section class="page-top-recipe">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 order-lg-2">
+              <div class="pt-recipe-item large-item">
+                <div class="pt-recipe-img set-bg" data-setbg="img/recipe-3.jpg">
+                  <i class="fa fa-plus"></i>
                 </div>
+                <div class="pt-recipe-text">
+                  <span>March 10, 2019</span>
+                  <h3>Cannellini Aglio e Olio with Salmon</h3>
+                </div>
+              </div>
             </div>
-        </section>
+            <div class="col-lg-3 col-md-6 order-lg-1">
+              <div class="pt-recipe-item">
+                <div class="pt-recipe-img set-bg" data-setbg="img/recipe-1.jpg">
+                  <i class="fa fa-plus"></i>
+                </div>
+                <div class="pt-recipe-text">
+                  <h4>Raw Vegan Carrot Cake Bites with Avocado</h4>
+                </div>
+              </div>
+              <div class="pt-recipe-item">
+                <div class="pt-recipe-img set-bg" data-setbg="img/recipe-2.jpg">
+                  <i class="fa fa-plus"></i>
+                </div>
+                <div class="pt-recipe-text">
+                  <h4>One Pot Weeknight Lasagna Soup Recipe</h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 order-lg-3">
+              <div class="pt-recipe-item">
+                <div class="pt-recipe-img set-bg" data-setbg="img/recipe-4.jpg">
+                  <i class="fa fa-plus"></i>
+                </div>
+                <div class="pt-recipe-text">
+                  <h4>Beef Burger with French Fries and Salad</h4>
+                </div>
+              </div>
+              <div class="pt-recipe-item">
+                <div class="pt-recipe-img set-bg" data-setbg="img/recipe-5.jpg">
+                  <i class="fa fa-plus"></i>
+                </div>
+                <div class="pt-recipe-text">
+                  <h4>Raspberry Pancakes with Honey and Butter</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-</body>
+    <footer class="bg-gray-100">
+      <div class="max-w-7xl mx-auto px-6 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+          <!-- Left -->
+          <div>
+            <div class="flex items-center gap-3 mb-6">
+              <img src="/img/logo.png" alt="">
+                </span>
+              </h2>
+            </div>
 
+            <p class="text-gray-500 leading-relaxed max-w-md">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
+              ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
+              accumsan lacus vel facilisis.
+            </p>
+          </div>
+
+          <!-- Right -->
+          <div>
+            <h3 class="text-2xl font-semibold text-gray-800 mb-6">
+              Subscribe to our newsletter
+            </h3>
+
+            <form class="flex flex-col sm:flex-row gap-4">
+              <input
+                type="email"
+                placeholder="Your e-mail"
+                class="flex-1 px-6 py-4 bg-white border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500"
+              />
+              <button
+                type="submit"
+                class="px-8 py-4 bg-pink-600 text-white font-semibold rounded-md hover:bg-pink-700 transition"
+              >
+                Subscribe
+              </button>
+            </form>
+
+            <!-- Social -->
+            <div
+              class="flex flex-wrap items-center gap-8 mt-10 text-gray-400 text-sm"
+            >
+              <a
+                href="#"
+                class="flex items-center gap-2 hover:text-gray-700 transition"
+              >
+                <i class="fab fa-instagram"></i> INSTAGRAM
+              </a>
+              <a
+                href="#"
+                class="flex items-center gap-2 hover:text-gray-700 transition"
+              >
+                <i class="fab fa-pinterest"></i> PINTEREST
+              </a>
+              <a
+                href="#"
+                class="flex items-center gap-2 hover:text-gray-700 transition"
+              >
+                <i class="fab fa-facebook-f"></i> FACEBOOK
+              </a>
+              <a
+                href="#"
+                class="flex items-center gap-2 hover:text-gray-700 transition"
+              >
+                <i class="fab fa-twitter"></i> TWITTER
+              </a>
+              <a
+                href="#"
+                class="flex items-center gap-2 hover:text-gray-700 transition"
+              >
+                <i class="fab fa-youtube"></i> YOUTUBE
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom -->
+        <div class="border-t border-gray-200 mt-12 pt-6 text-sm text-gray-400">
+          Copyright ©2026 All rights reserved | This template is made with
+          <span class="text-pink-500">♥</span> by Colorlib
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
